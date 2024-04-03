@@ -5,22 +5,18 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github grantlemons/trie))
 
-(authors "Author Name")
+(authors "Grant Lemons")
 
-(maintainers "Maintainer Name")
+(maintainers "Grant Lemons")
 
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(license AGPL)
 
 (package
  (name trie)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
+ (synopsis "Trie implementation for ASCII")
+ (description "A basic Trie implementation for all printable ASCII characters (32-127).")
+ (depends ocaml dune (alcotest :with-test))
  (tags
-  (topics "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
+  (topics "trie")))
