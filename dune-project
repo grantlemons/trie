@@ -4,19 +4,18 @@
 
 (generate_opam_files true)
 
-(source
- (github grantlemons/trie))
-
+(source (github grantlemons/trie))
+(license AGPL-3.0-only)
 (authors "Grant Lemons")
-
 (maintainers "Grant Lemons")
-
-(license AGPL)
 
 (package
  (name trie)
  (synopsis "Trie implementation for ASCII")
  (description "A basic Trie implementation for all printable ASCII characters (32-127).")
- (depends ocaml dune (alcotest :with-test))
+(depends
+  ocaml
+  dune
+  (alcotest :with-test))
  (tags
   (topics "trie")))
